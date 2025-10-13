@@ -678,8 +678,8 @@ def main():
         for idx, row in edited_df.iterrows():
             mask = cost_sharing_df['benefit_id'] == row['benefit_id']
             for col in cost_sharing_df.columns:
-            if col in row:
-                cost_sharing_df.loc[mask, col] = row[col]
+                if col in row:
+                    cost_sharing_df.loc[mask, col] = row[col]
 
         # Update session state
         st.session_state.cost_sharing_df = cost_sharing_df
