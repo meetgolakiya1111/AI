@@ -676,7 +676,6 @@ def main():
 
         # Merge edited values back to full dataframe
         for idx, row in edited_df.iterrows():
-            //cost_sharing_df.loc[cost_sharing_df['benefit_id'] == row['benefit_id']] = row
             mask = cost_sharing_df['benefit_id'] == row['benefit_id']
             for col in cost_sharing_df.columns:
             if col in row:
